@@ -1,0 +1,98 @@
+body {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    width: 80%;
+}
+
+.constant {
+    width: 40%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.temporary {
+    width: 60%;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    background-color: white;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    cursor: pointer;
+}
+
+.morphing,
+.trajectory_movement,
+.using_mask {
+    width: 600px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.morph,
+.movement,
+.mask {
+    width: 500px;
+    height: 500px;
+    padding: 25px;
+    border: solid black;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#dog {
+    visibility: hidden;
+}
+
+.mask {
+    width: 550px;
+    height: 550px;
+    padding: 0;
+    background-image: url('cat.jpg');
+    background-size: cover;
+}
+
+.light {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 550px;
+    height: 550px;
+    cursor: none;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: red;
+    offset-path: path('M1 1L28 501L45.5 1L74.5 501L100 1L123 501L161.5 1L192.5 501L228.5 1L264.5 501L292.5 1L336 501L372 1L416 501L449 1L501 501L1 459.5L501 416.5L1 386.5L501 346.5L1 313.5L501 261L1 223L501 183L1 141L501 109.5L1 87L501 48.5L1 1Z');
+    animation: move 30s linear infinite;
+}
+
+@keyframes move {
+    100% {
+        offset-distance: 100%;
+    }
+}
